@@ -9,9 +9,9 @@
 <body>
     <div class="chat-box">
         <h2><%= title %></h2>
+        <!-- Get each message's object key pair value  -->
         <% for (let i = 0; i < messages.length; i++) { %>
         <% let message = messages[i]; %>
-            <!-- Get each message's object key pair value  -->
             <div>
                 <h3><%= message.user; %></h3>
                 <p> <%= message.text; %> </p>
