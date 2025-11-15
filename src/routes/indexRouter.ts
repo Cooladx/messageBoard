@@ -2,17 +2,14 @@ import express, { Router } from "express";
 import { PORT } from "../app.js";
 export const indexRouter: Router = express.Router();
 
-
-
 type message = {
-  id: number,
-  text: string,
-  user: string,
-  added: Date
-}
+  id: number;
+  text: string;
+  user: string;
+  added: Date;
+};
 
 export const messages: message[] = [
- 
   {
     id: 1,
     text: "Good top of the morning to you!",
@@ -20,7 +17,7 @@ export const messages: message[] = [
     added: new Date(),
   },
   {
-     id: 2,
+    id: 2,
     text: "Wsp people!",
     user: "Linda",
     added: new Date(),
@@ -34,7 +31,9 @@ export const messages: message[] = [
 ];
 
 indexRouter.get("/", (req, res) => {
-    res.render("index", {  title: "Mini Messageboard", messages: messages, PORT: PORT });
-})
-
-
+  res.render("index", {
+    title: "Mini Messageboard",
+    messages: messages,
+    PORT: PORT,
+  });
+});

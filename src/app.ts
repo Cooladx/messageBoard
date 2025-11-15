@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-import {indexRouter} from "./routes/indexRouter.js";
+import { indexRouter } from "./routes/indexRouter.js";
 import { messageRouter } from "./routes/messageRouter.js";
 
 const app = express();
@@ -23,10 +23,10 @@ const assetsPath = path.join(__dirname, "../public");
 app.use(express.static(assetsPath));
 
 // Main page for indexRouter
-app.use("/", indexRouter)
+app.use("/", indexRouter);
 
 // Pages for sending message and viewing specific id message
-app.use("/new", messageRouter)
+app.use("/new", messageRouter);
 
 export const PORT: number = Number(process.env.PORT) || 3000;
 
