@@ -1,0 +1,20 @@
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+
+export default defineConfig([
+  {
+    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: { globals: globals.node },
+    rules: {
+      "prefer-const": "error", // make 'prefer-const' an error
+      "no-unused-vars": "warn", // warn for unused variables
+    },
+  },
+  tseslint.configs.recommended,
+  eslintConfigPrettier,
+]);
