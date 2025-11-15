@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+</head>
+<body>
+    <!-- If message is in the array -->
+   <% if (routeId) { %>
+  <p>Time: <%= routeId.added%></p>
+  <p>User: <%= routeId.user %></p>
+  <p>Text: <%= routeId.text %></p>
+  <!-- Otherwise, message id could not be found -->
+<% } else { %>
+  <p>Message not found.</p>
+<% } %>
+
+<a href="http://localhost:4000/"> Go back</a>
+
+</body>
+</html>
