@@ -9,7 +9,8 @@
     "format": "npx prettier . --write",
     "lint": "eslint . ",
     "build": "tsc --build && npm run copy-assets",
-    "copy-assets": "cp -r src/views dist/src/views && cp -r public dist/public"
+    "copy-assets": "cp -r src/views dist/src/views && cp -r public dist/public",
+    "clean": "rm -r dist"
   },
   "keywords": [],
   "author": "",
