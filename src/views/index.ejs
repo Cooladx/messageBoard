@@ -8,22 +8,17 @@
 </head>
 <body>
     <div class="chat-box">
-    <% for (let i = 0; i < messages.length; i++) { %>
-    <% let message = messages[i]; %>
-    
-        <ul>
-            <li><%= message.text %></li>
-            <li><%= message.user %></li>
-            <li><%= message.added %></li>
-    
-        </ul>
-    
-   <% } %>
+        <h2><%= title %></h2>
+        <% for (let i = 0; i < messages.length; i++) { %>
+        <% let message = messages[i]; %>
+            <!-- Get each message's object key pair value  -->
+            <ul>
+                <li><%= message.text; %></li>
+                <li><%= message.user; %></li>
+                <li><%= message.added; %></li>
+            </ul> 
+        <% } %>
    </div>
 
 </body>
 </html>
-
-<!-- text: "Hello World!",
-    user: "Charles",
-    added: new Date(), -->
