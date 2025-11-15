@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch ./src/app.ts",
+    "dev": "npx tsx --watch ./src/app.ts",
     "format": "npx prettier . --write",
     "lint": "eslint . ",
-    "build": "tsc --build"
+    "build": "tsc --build && npm run copy-assets",
+    "copy-assets": "cp -r src/views dist/src/views && cp -r public dist/public"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "globals": "^16.5.0",
     "jiti": "^2.6.1",
     "prettier": "3.6.2",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4"
   }
