@@ -16,11 +16,10 @@
                 <h3><%= message.user; %></h3>
                 <p> <%= message.text; %> </p>
                 <p>Sent on: <%= message.added %> </p>
-                <a href= "http://localhost:<%= PORT %>/new/<%= message.id %>"  >More details</a>
-            </div>
+        <a href="/new/<%= message.id %>">More details</a>            
+    </div>
         <% } %>
-        <a href="http://localhost:<%= PORT%>/new">Send New Message</a>
-
+        <a href="/new">Send New Message</a>
    </div>
 
 </body>
