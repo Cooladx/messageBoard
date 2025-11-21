@@ -1,5 +1,9 @@
+// src/routes/indexRouter.ts
+
 import express, { Router } from "express";
 import { PORT } from "../app.js";
+
+import { getAllMessages } from "../controllers/userController.js";
 export const indexRouter: Router = express.Router();
 
 type message = {
@@ -30,10 +34,4 @@ export const messages: message[] = [
   },
 ];
 
-indexRouter.get("/", (req, res) => {
-  res.render("index", {
-    title: "Mini Messageboard",
-    messages: messages,
-    PORT: PORT,
-  });
-});
+indexRouter.get("/", getAllMessages);
