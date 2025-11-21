@@ -1,8 +1,8 @@
 import express, { Router } from "express";
 import { PORT } from "../app.js";
-import { messages } from "./indexRouter.js";
 
-import { getUserForm, createUsernamePost, getUserId } from "../controllers/userController.js";
+
+import { getUserForm, } from "../controllers/userController.js";
 
 
 export const messageRouter: Router = express.Router();
@@ -13,7 +13,7 @@ export const messageRouter: Router = express.Router();
 messageRouter.get("/", getUserForm); 
 
 // Routes to controller for posting username and message on /new
-messageRouter.post("/", createUsernamePost);
+//messageRouter.post("/", createUsernamePost);
 
 
-messageRouter.get("/:id", getUserId);
+//messageRouter.get("/:id", getUserId);
