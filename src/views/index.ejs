@@ -1,3 +1,5 @@
+<!-- src/views/index.ejs-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +12,17 @@
     <div class="chat-box">
         <h2><%= title %></h2>
         <!-- Get each message's object key pair value  -->
-        <% for (let i = 0; i < messages.length; i++) { %>
-        <% let message = messages[i]; %>
+        
+        <%  messages.forEach(element => { %>
             <div>
-                <h3><%= message.user; %></h3>
-                <p> <%= message.text; %> </p>
-                <p>Sent on: <%= message.added %> </p>
-                <a href= "http://localhost:<%= PORT %>/new/<%= message.id %>"  >More details</a>
+            <h2> <%= `${element.username}` %> </h2>
+            <p> <%= element.message %></p>
+            <p> <%= element.created_at %></p>
             </div>
-        <% } %>
-        <a href="http://localhost:<%= PORT%>/new">Send New Message</a>
+       <%  }) %>
+        
+
+        <a href="http://localhost:<%= PORT%>/new">Send New Messages</a>
 
    </div>
 
